@@ -1,14 +1,20 @@
+import NavBar from "../components/NavBar";
+import MovieCard from "../components/MovieCard";
 import { movies } from "../data";
 
-function Home() {
+const Home = () => {
+  const movieList = movies.map((movie) => (
+    <MovieCard key={movie.title} title={movie.title} />
+  ));
 
   return (
     <>
       <header>
-        {/* What component should go here? */}
+        <NavBar />
       </header>
       <main>
-        {/* Info goes here! */}
+        <h1>Home Page</h1>
+        {movieList}
       </main>
     </>
   );

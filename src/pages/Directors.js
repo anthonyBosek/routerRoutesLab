@@ -1,14 +1,18 @@
+import NavBar from "../components/NavBar";
+import Card from "../components/Card";
 import { directors } from "../data";
 
-function Directors() {
-  
+const Directors = () => {
+  const dirsList = directors.map((dir) => <Card key={dir.name} {...dir} />);
+
   return (
     <>
       <header>
-        {/* What component should go here? */}
+        <NavBar />
       </header>
       <main>
-        {/* Director info here! */}
+        <h1>Directors Page</h1>
+        {dirsList}
       </main>
     </>
   );
